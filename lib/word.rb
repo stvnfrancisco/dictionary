@@ -1,11 +1,12 @@
 class Word
-  @@all_words = []
 
-  define_method(:initialize) do |word|
-    @word = word
+  define_method(:initialize) do |description|
+    @description = description
   end
 
   define_method(:description) do
-    @word
+    @description
+  end
 end
-end
+
+  
