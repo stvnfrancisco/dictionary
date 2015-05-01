@@ -23,3 +23,11 @@ end
      expect(Word.all()).to(eq([test_word]))
    end
  end
+
+ describe(".clear") do
+   it('empties out all saved words') do
+     Word.new('new').save()
+     Word.clear()
+     expect(Word.all()).to(eq([]))
+   end
+ end
