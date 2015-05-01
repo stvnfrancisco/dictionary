@@ -2,13 +2,17 @@ require('rspec')
 require('word')
 
 describe(Word) do
+  before() do
+    Word.clear()
+  end
+
+
   describe('#description') do
-    it('lets you to give it a description') do
+    it('lets you add a word') do
       test_word = Word.new('new')
       expect(test_word.description()).to(eq('new'))
   end
  end
-end
 
   describe(".all") do
     it("is empty at first") do
@@ -31,3 +35,4 @@ end
      expect(Word.all()).to(eq([]))
    end
  end
+end

@@ -1,0 +1,27 @@
+<h1>Add Words and Definitions!</h1>
+
+<p>Here are your words:</p>
+
+<ol>
+  <% @words.each() do |word| %>
+  <li><%= word.description() %></li>
+  <% end %>
+</ol>
+
+<p>Add a new word</p>
+
+<form action="/words" method="post">
+  <label for="description">Add a word</label>
+  <input id="description" name="description" type="text">
+
+  <button type="submit">Add a word</button>
+</form>
+
+<p>Add a new definition</p>
+
+<form action="/definition" method="post">
+  <label for="description">Add a definition</label>
+  <input id="description" name="description" type="text">
+
+  <button type="submit">Add a definition</button>
+</form>
